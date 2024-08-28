@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Requirement Report</title>
+</head>
+<body>
+    <h2>Food Requirement Report</h2>
+    <p><strong>Employee Name:</strong> <span id="employeeName"></span></p>
+    <p><strong>Needs Dinner:</strong> <span id="dinnerOption"></span></p>
+
+    <script>
+        // Retrieve the URL parameters
+        const urlParams = new URLSearchParams(window.location.search);
+        
+        // Get the employeeName and dinnerOption values from the URL parameters
+        const employeeName = urlParams.get('employeeName');
+        const dinnerOption = urlParams.get('dinnerOption');
+
+        // Display the values on the page
+        document.getElementById('employeeName').textContent = employeeName || "N/A";
+        document.getElementById('dinnerOption').textContent = dinnerOption || "N/A";
+    </script>
+</body>
+</html>
